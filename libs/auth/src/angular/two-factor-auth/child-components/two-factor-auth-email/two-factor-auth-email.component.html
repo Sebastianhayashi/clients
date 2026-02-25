@@ -7,6 +7,9 @@
     appInputVerbatim
     [formControl]="tokenFormControl"
     (keyup)="onTokenChange($event)"
+    autocomplete="one-time-code"
+    inputmode="numeric"
+    pattern="[0-9]*"
   />
 </bit-form-field>
 

@@ -18,7 +18,17 @@
 } @else {
   <bit-form-field>
     <bit-label>{{ "verificationCode" | i18n }}</bit-label>
-    <input bitInput type="text" [formControl]="otp" required appInputVerbatim appAutofocus />
+    <input
+      bitInput
+      type="text"
+      [formControl]="otp"
+      required
+      appInputVerbatim
+      appAutofocus
+      autocomplete="one-time-code"
+      inputmode="numeric"
+      pattern="[0-9]*"
+    />
   </bit-form-field>
   <button
     bitButton
